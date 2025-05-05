@@ -49,7 +49,9 @@ export default function ScrollGradientText({ text, className }: Props) {
         .map((paragraph, index) => (
           <p
             key={index}
-            ref={(el) => (refs.current[index] = el)}
+            ref={(el) => {
+              refs.current[index] = el;
+            }}            
             className="opacity-0 translate-y-4 mb-5 text-zinc-700 dark:text-zinc-300"
           >
             {paragraph.trim()}
