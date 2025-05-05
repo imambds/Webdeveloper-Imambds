@@ -18,27 +18,38 @@ export const SmoothScrollProvider = ({
   const [scroll, setScroll] = useState<LocomotiveScroll | null>(null)
 
   useEffect(() => {
-    if (!scroll) {
-      ;(async () => {
-        try {
-          const LocomotiveScroll = (await import("locomotive-scroll")).default
+    const initializeScroll = async () => {
+      try {
+        const LocomotiveScroll = (await import("locomotive-scroll")).default
 
-          setScroll(
-            new LocomotiveScroll({
-              el: document.querySelector("[data-scroll-container]"),
-              ...options,
-            })
-          )
-        } catch (error) {
-          throw Error(`[SmoothScrollProvider]: ${error}`)
+        const scrollContainer = document.querySelector("[data-scroll-container]")
+        
+        if (!scrollContainer) {
+          console.error('[SmoothScrollProvider]: Scroll container not found.')
+          return
         }
-      })()
+
+        const scrollInstance = new LocomotiveScroll({
+          el: scrollContainer,
+          ...options,
+        })
+
+        setScroll(scrollInstance)
+      } catch (error) {
+        console.error(`[SmoothScrollProvider]: Failed to initialize LocomotiveScroll:`, error)
+      }
     }
 
+    // Only initialize once when component mounts
+    if (!scroll) {
+      initializeScroll()
+    }
+
+    // Cleanup on unmount
     return () => {
       scroll?.destroy()
     }
-  }, [options, scroll])
+  }, [options, scroll]) // Only rerun when options change, not scroll itself
 
   return (
     <SmoothScrollContext.Provider
