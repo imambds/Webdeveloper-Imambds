@@ -13,23 +13,27 @@ interface Props {
 
 export default function ScrollGradientText({ text, className }: Props) {
   const container = useRef<HTMLDivElement | null>(null);
-  const refs = useRef<(HTMLParagraphElement | null)[]>([]);
+  const refs = useRef<HTMLParagraphElement[]>([]);
 
   useEffect(() => {
-    if (!container.current) return;
+    if (!container.current || refs.current.length === 0) return;
 
-    gsap.to(refs.current, {
-      scrollTrigger: {
-        trigger: container.current,
-        scrub: true,
-        start: "top bottom",
-        end: "bottom top",
-      },
-      opacity: 2,
-      y: 0,
-      ease: "none",
-      stagger: 0.2,
-    });
+    const ctx = gsap.context(() => {
+      gsap.to(refs.current, {
+        scrollTrigger: {
+          trigger: container.current,
+          scrub: true,
+          start: "top bottom",
+          end: "bottom top",
+        },
+        opacity: 2,
+        y: 0,
+        ease: "none",
+        stagger: 0.2,
+      });
+    }, container);
+
+    return () => ctx.revert(); // cleanup GSAP context on unmount
   }, []);
 
   return (
@@ -44,14 +48,14 @@ export default function ScrollGradientText({ text, className }: Props) {
       }}
     >
       {text
-        .split("\n\n") // pisahkan berdasarkan paragraf
+        .split("\n\n")
         .filter((p) => p.trim() !== "")
         .map((paragraph, index) => (
           <p
             key={index}
             ref={(el) => {
-              refs.current[index] = el;
-            }}            
+              if (el) refs.current[index] = el;
+            }}
             className="opacity-0 translate-y-4 mb-5 text-zinc-700 dark:text-zinc-300"
           >
             {paragraph.trim()}
