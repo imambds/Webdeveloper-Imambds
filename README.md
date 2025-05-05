@@ -1,6 +1,6 @@
 # imambds — Personal Portfolio
 
-This is my personal portfolio website built with Next.js, Typescript, Tailwind CSS.  
+This is my personal portfolio website built with Next.js & Typescript.
 It showcases my profile, skills, experience, projects, and certifications.
 
 ## Features
