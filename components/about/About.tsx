@@ -109,7 +109,7 @@ export default function About() {
           />
 
           <motion.a
-            href="/CV/cv-imam-budi-prakoso.pdf"
+            href="/CV/CV-IMAM BUDI PRAKOSO.pdf"
             download
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
