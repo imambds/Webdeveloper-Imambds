@@ -40,7 +40,7 @@ export const projects = [
       "Developed Apweather, a responsive weather forecast app using React.js and Tailwind CSS, powered by the OpenWeatherMap API for real-time weather data and forecasts.",
     image: "/images/project-1d.png",
     tech: ["React.js"],
-    linkProject: "",
+    linkProject: "https://skylint.netlify.app/",
     
   },
   {
