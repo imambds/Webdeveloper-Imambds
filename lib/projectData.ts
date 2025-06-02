@@ -54,4 +54,76 @@ export const projects = [
     linkProject: "https://www.spkvikor.com",
     
   },
+  {
+    id: 6,
+    slug: "project-6",
+    title: "World Telecommunication and Information Society Day 2023",
+    description:
+      "Digital Marketing",
+    image: "/images/project-dg1.jpg",
+    tech: ["Adobe Photoshop"],
+    linkProject: "https://www.instagram.com/p/CsVKASfLLSv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    
+  },
+  {
+    id: 7,
+    slug: "project-7",
+    title: "Technology Big Data",
+    description:
+      "Digital Marketing",
+    image: "/images/project-dg2.jpg",
+    tech: ["Adobe Photoshop"],
+    linkProject: "https://www.instagram.com/p/CsXwpqMLv6t/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    
+  },
+  {
+    id: 8,
+    slug: "project-8",
+    title: "Apache Nifi",
+    description:
+      "Digital Marketing",
+    image: "/images/project-dg3.jpg",
+    tech: ["Adobe Photoshop"],
+    linkProject: "https://www.instagram.com/p/CwzOUK7rnV_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  },
+  {
+    id: 9,
+    slug: "project-9",
+    title: "CyberSecurity",
+    description:
+      "Digital Marketing",
+    image: "/images/project-dg4.png",
+    tech: ["Adobe Photoshop", "Capcut"],
+    linkProject: "https://www.instagram.com/reel/CxxG5LSIat3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  },
+  {
+    id: 10,
+    slug: "project-10",
+    title: "Docker",
+    description:
+      "Digital Marketing",
+    image: "/images/project-dg5.jpg",
+    tech: ["Adobe Photoshop"],
+    linkProject: "https://www.instagram.com/p/CymmmruSomj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  },
+  {
+    id: 11,
+    slug: "project-11",
+    title: "Asean Indonesia 2023",
+    description:
+      "Digital Marketing",
+    image: "/images/project-dg6.jpg",
+    tech: ["Adobe Photoshop"],
+    linkProject: "https://www.instagram.com/p/CxKgzNCrTf3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  },
+  {
+    id: 12,
+    slug: "project-12",
+    title: "KCJB Whoosh",
+    description:
+      "Digital Marketing",
+    image: "/images/project-dg7.jpg",
+    tech: ["Adobe Photoshop"],
+    linkProject: "https://www.instagram.com/p/Cx94O4PraxI/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  },
 ]
