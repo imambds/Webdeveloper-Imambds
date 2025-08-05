@@ -99,7 +99,7 @@ export default function About() {
         </div>
 
         {/* Description */}
-        <div className="mb-16 flex flex-col gap-6">
+        {/* <div className="mb-16 flex flex-col gap-6">
           <ScrollGradientText
             text={`A recent graduate with a Bachelor's degree in Information Systems from Mercu Buana Yogyakarta University
             With a strong passion for graphic design, UI/UX design, web development, and AI development.
@@ -125,7 +125,7 @@ export default function About() {
               </span>
             </span>
           </motion.a>
-        </div>
+        </div> */}
 
         {/* --- Tech Stack, Coding Hour, Fav Framework --- */}
         <div className="mb-20 grid grid-cols-1 gap-10">
