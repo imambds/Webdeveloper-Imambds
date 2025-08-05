@@ -10,7 +10,7 @@ const font = Work_Sans({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: {
     template: "Imambds | %s",
-    default: "Imambds ── Web Developer",
+    default: "Imambds",
   },
   description:
     "A seasoned frontend web developer with a passion for creating engaging and interactive websites.",
