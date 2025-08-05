@@ -99,16 +99,16 @@ export default function About() {
         </div>
 
         {/* Description */}
-        {/* <div className="mb-16 flex flex-col gap-6">
+        <div className="mb-16 flex flex-col gap-6">
           <ScrollGradientText
             text={`A recent graduate with a Bachelor's degree in Information Systems from Mercu Buana Yogyakarta University
-            With a strong passion for graphic design, UI/UX design, web development, and AI development.
+            With a strong passion for graphic design, UI/UX design, digital marketing, web development, and AI development.
 
             I am accustomed to working in teams and take every task seriously, recognizing its importance. I am eager to gain new experiences that will allow me to grow and further enhance my skills.`}
             className="text-lg md:text-xl leading-relaxed"
           />
 
-          <motion.a
+          {/* <motion.a
             href="/CV/cv-imambudiprakoso.pdf"
             download
             initial={{ opacity: 0, y: 50 }}
@@ -124,8 +124,8 @@ export default function About() {
                 Download My CV
               </span>
             </span>
-          </motion.a>
-        </div> */}
+          </motion.a> */}
+        </div>
 
         {/* --- Tech Stack, Coding Hour, Fav Framework --- */}
         <div className="mb-20 grid grid-cols-1 gap-10">
